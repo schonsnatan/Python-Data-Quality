@@ -5,19 +5,19 @@ jobs:
     build-and-test:
         runs-on: ubuntu-latest
         steps:
-            - name: Baixar o repositório
+            - name: Download Repository
               uses: actions/checkout@v4
 
-            - name: Instalar o Python
+            - name: Install Python
               uses: actions/setup-python@v5
               with:
                 python-version: 3.14.2
 
-            - name: Instalar o Poetry via pip
+            - name: Install Poetry with pip
               run: pip install poetry
 
-            - name: Instalar dependências com o Poetry
+            - name: Instalar dependencies with poetry
               run: poetry install
 
-            - name: Rodar minha rotina de testes com o Poetry
-              run: poetry run pytest tests -v
+            - name: Run my test routine with Poetry
+              run: poetry run python -m pytest tests -v
