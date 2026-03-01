@@ -34,3 +34,6 @@ run = """
 python app/main.py
 """
 doc = "mkdocs serve"
+
+[tool.poetry]
+package-mode = false
