@@ -1,5 +1,5 @@
 [project]
-name = "cursos-pydantic-jornada"
+name = "Python-Data-Quality"
 version = "0.1.0"
 description = ""
 authors = [
@@ -34,7 +34,3 @@ run = """
 python app/main.py
 """
 doc = "mkdocs serve"
-
-[tool.poetry]
-package-mode = false
-packages = [{include = "app"}]
