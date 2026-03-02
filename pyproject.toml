@@ -37,4 +37,3 @@ doc = "mkdocs serve"
 
 [tool.poetry]
 package-mode = false
-packages = [{include = "app"}]
