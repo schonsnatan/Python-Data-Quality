@@ -1,30 +1,19 @@
 # Welcome to MkDocs
 
-Ola turma, teste
+## Challenge 1 Billions rows Workflow
+
+- In order to develop the ETL we are going to develop the following use case
 
 ```mermaid
-pie title Which animals do you prefer as pets?
-    "Dogs" : 386
-    "Cats" : 85
-    "Rabbits" : 53
-    "Hamsters" : 101
-```
-
-```mermaid
-flowchart LR
-    subgraph subgraph1
-        direction TB
-        top1[top] --> bottom1[bottom]
-    end
-    subgraph subgraph2
-        direction TB
-        top2[top] --> bottom2[bottom]
-    end
-    %% ^ These subgraphs are identical, except for the links to them:
-
-    %% Link *to* subgraph1: subgraph1 direction is maintained
-    outside --> subgraph1
-    %% Link *within* subgraph2:
-    %% subgraph2 inherits the direction of the top-level graph (LR)
-    outside ---> top2
+graph TD
+    A[Configure Variables] --> B[Read SQL Database]
+    B --> C[Input Schema Validation]
+    
+    C -- Failure --> D[Error Alert]
+    C -- Success --> E[Transform KPIs]
+    
+    E --> F[Output Schema Validation]
+    
+    F -- Failure --> G[Error Alert]
+    F -- Success --> H[Save to DuckDB]
 ```
